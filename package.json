@@ -4,9 +4,11 @@
   "author": "Malone Hedges",
   "private": true,
   "scripts": {
+    "publish": "npm run build && npm run surge",
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
-    "lint": "eslint --ext .js,.vue src"
+    "lint": "eslint --ext .js,.vue src",
+    "surge": "surge -p dist -d linear-congruences.surge.sh"
   },
   "dependencies": {
     "vue": "^2.0.1"
